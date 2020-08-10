@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-right: 0;
+  padding: 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 100px;
+  grid-template-areas: "image" "text" "stats";
+  height: 580px;
+  margin:50px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+}
+.card-image {
+  grid-area: image;
+}
+.card-text {
+  grid-area: text;
+  margin-top:0;
+  background: linear-gradient(-45deg,rgb(58, 206, 58),rgb(58, 122, 206));
+  width: 100%;
+  height: 280px;
+}
+.card-text .price{
+  font-size: 50px;
+  color:rgb(122, 6, 64);
+}
+.price p{
+  margin: 15px;
+}
+.card-stats {
+  grid-area: stats; 
+}
+.card-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card-image img{
+  margin-top: 0.2px;
+  width:100%;
+  border-radius:5px;
+  height: 300px;
+}
+.card-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr ;
+  margin-top: 15px;
+  height: 142px;
+  font-weight: bold;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(71, 80, 212);
+}
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 15px;
+}
+.btn{
+  margin-bottom: 200px;
+  font-size: 85%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+  font-display:rgb(63, 28, 63);
+  background: linear-gradient(-45deg,rgb(224, 175, 224),rgb(185, 59, 143));
+}
+
+.card-stats .stat-border{
+    border-right:1px solid black;
+    border-left:1px solid black;
+    padding-right:20px;
+    padding-left:20px;
+    padding-top: 55px;
+    margin:5px;
+}
+@media(min-width:992px){
+  .card:hover{
+    margin-top: -0.25rem;
+    margin-bottom: 0.25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.3);
+  }
+  .card:hover .btn{
+    opacity: 1;
+  }
+}
